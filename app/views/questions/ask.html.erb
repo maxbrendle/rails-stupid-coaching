@@ -1,10 +1,11 @@
 <!-- <h1>Questions#ask</h1>
 <p>Find me in app/views/questions/ask.html.erb</p>
 <%= @question %> -->
-
-
-<p>Ask him anything!</p>
-  <p><form id="input" action="/answer">
+<div class="container">
+  <p>Ask him anything!</p>
+  <p><form action="/answer">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <input type="text" name="question">
     <input type="submit" value="Ask!">
   </form></p>
+</div>
